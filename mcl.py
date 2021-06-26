@@ -183,7 +183,7 @@ def main():
         transform_train = transforms.Compose([
             transforms.RandomCrop(32, padding=4),
             transforms.RandomHorizontalFlip(),
-            transforms.RandomRotation(5),
+            # transforms.RandomRotation(5),
             CIFAR10Policy(),
             # RandAugment(),
             cutout(cutout_size, 1.0, False),
@@ -202,7 +202,7 @@ def main():
         transform_train = transforms.Compose([
             transforms.RandomCrop(32, padding=4),
             transforms.RandomHorizontalFlip(),
-            transforms.RandomRotation(5),
+            # transforms.RandomRotation(5),
             CIFAR10Policy(),
             cutout(cutout_size, 1.0, False),
             transforms.ToTensor(),
